@@ -7,29 +7,32 @@
 
       {{ matchday }}
 
+      <FixtureList></FixtureList>
+
     </div>
   </section>
 </template>
 
 <script>
+  import FixtureList from "~/components/FixtureList"
+
   export default {
+    components: {
+      FixtureList
+    },
     data() {
       return {
         matchday: null
       }
     },
     watch: {
-      matchday(value) {
+      matchday() {
         this.getMatchDay();
       }
     },
     methods: {
       getMatchDay() {
-        this.$store.dispatch("GET_MATCHDAY", this.matchday).then(response => {
-          if(response) {
-            this.store.commit("SET_MATCHDAY", response.data);
-          }
-        })
+        this.$store.dispatch("GET_MATCHDAY", this.matchday);
       }
     }
   }
