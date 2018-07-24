@@ -1,0 +1,41 @@
+resource_types:
+
+resources:
+- name: code
+  type: git
+  source:
+    branch: {{git-branch}}
+    private_key: {{gitlab-private-key}}
+    uri: {{gitlab-ssh}}
+    check_every: 2m
+
+groups:
+  - name: Test env
+    jobs:
+      - build-deploy-dev
+
+
+jobs:
+# Do I want to build at every dev commit?
+- name: build-deploy-dev
+  serial_groups: [main-build]
+  plan:
+  - do:
+    - aggregate:
+       - get: code
+         trigger: true
+    - task: deploy
+      config:
+        params:
+                ENV: dev
+                CONFIG: dev
+
+        inputs:
+        - name: code
+        platform: linux
+        image_resource:
+          type: docker-image
+          source: {repository: 548760365095.dkr.ecr.eu-west-1.amazonaws.com/everyone/alpine-node-builder}
+        run:
+          path:
+            code/ci/scripts/buildAndDeploy.sh
