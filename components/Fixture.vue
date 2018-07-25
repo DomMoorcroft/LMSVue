@@ -4,8 +4,6 @@
       <div id="homeTeam" class="homeTeam">
         {{ match.homeTeam.name }}
       </div>
-
-
       <div id="homeTeamScore" class="score">{{ match.score.fullTime.homeTeam | score }}</div>
       <div class="divider"> &mdash; </div>
       <div id="awayTeamScore" class="score">{{ match.score.fullTime.awayTeam | score }}</div>
@@ -90,7 +88,6 @@ overflow: hidden;
 }
 .stats {
   display: flex;
-
 
   transition: all .5s ease;
   height: auto;

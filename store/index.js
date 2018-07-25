@@ -15,6 +15,8 @@ const createStore = () => {
     actions: {
       GET_MATCHDAY({ commit }, matchdayId) {
         var url = `/v2/competitions/2021/matches?matchday=${matchdayId}`;
+        // Premier League - 2021
+        // Cmampionship - 2016
         return axios
           .get(url)
           .then(result => {
