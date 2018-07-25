@@ -1,5 +1,5 @@
 {
-  "name": "courier-marketplace-ui",
+  "name": "LMS-PremierLeague",
   "version": "1.0.0",
   "description": "Nuxt.js project",
   "author": "Dominic Moorcroft <dominic.moorcroft@hermes-europe.co.uk>",
@@ -23,7 +23,6 @@
     "vee-validate": "^2.0.6",
     "vuejs-datepicker": "^1.0.3",
     "vuex-persist": "^1.1.6"
-
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

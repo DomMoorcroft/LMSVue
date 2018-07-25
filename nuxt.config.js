@@ -21,6 +21,9 @@ module.exports = {
   /*
   ** Build configuration
   */
+  plugins: [
+    "~/plugins/filters.js"
+  ],
   build: {
     vendor:["axios"],
     /*

@@ -19,7 +19,7 @@ const createStore = () => {
           .get(url)
           .then(result => {
             const { data } = result;
-            console.log("result: ", result)
+
             commit("SET_MATCHDAY", data);
 
             return data;

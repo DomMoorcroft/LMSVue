@@ -1,6 +1,6 @@
 <template>
   <section >
-    <div>
+    <div class="container">
       <select v-model="matchday" style="width:100px;">
         <option v-for="(value, index) in 38" :key="index" :value="index+1">{{ index +1 }}</option>
       </select>
@@ -39,5 +39,11 @@
 </script>
 
 <style>
-
+.container {
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 </style>
