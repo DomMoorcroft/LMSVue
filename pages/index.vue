@@ -2,6 +2,7 @@
   <section >
 
     <Header></Header>
+    <Sidebar></Sidebar>
 
     <div class="container">
       <select v-model="matchday" style="width:100px;">
@@ -23,12 +24,14 @@
 <script>
   import Header from "~/components/Header";
   import FixtureList from "~/components/FixtureList";
+  import Sidebar from "~/components/Sidebar";
   import { mapState } from "vuex";
 
   export default {
     components: {
       Header,
-      FixtureList
+      FixtureList,
+      Sidebar
     },
     data() {
       return {
@@ -37,7 +40,8 @@
     },
     computed: {
       ...mapState ({
-        matchdays: state => state.matchday
+        matchdays: state => state.matchday,
+        showSidebar: state => state.showSidebar
       })
     },
     watch: {

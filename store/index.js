@@ -10,7 +10,8 @@ axios.defaults.headers = {
 const createStore = () => {
   return new vuex.Store({
     state: {
-      matchday: null
+      matchday: null,
+      showSidebar: false
     },
     actions: {
       GET_MATCHDAY({ commit }, matchdayId) {
@@ -36,7 +37,10 @@ const createStore = () => {
     mutations: {
       SET_MATCHDAY(state, data) {
         state.matchday = data;
-      }
+      },
+      TOGGLE_SIDEBAR(state, data) {
+        state.showSidebar = data;
+      },
     }
   })
 }

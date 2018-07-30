@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="nav">
-      <button class="burger">
+      <button class="burger" @click="toggleSidebar">
         <svg viewBox="0 0 10 10" width="25" height="25">
           <path d="M0,0 10,0 10,2 0,2 0,4 10,4 10,6 0,6 0,8 10,8 10,10 0,10" />
         </svg>
@@ -12,8 +12,19 @@
 </template>
 
 <script>
-  export default {
+import { mapState } from "vuex";
 
+  export default {
+    computed: {
+      ...mapState({
+        showSidebar: state => state.showSidebar
+      })
+    },
+    methods: {
+      toggleSidebar() {
+        this.$store.commit("TOGGLE_SIDEBAR", !this.showSidebar);
+      }
+    }
   }
 </script>
 
