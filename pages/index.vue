@@ -5,8 +5,9 @@
     <Sidebar></Sidebar>
 
     <div class="container">
-      <select v-model="matchday" style="width:100px;">
-        <option v-for="(value, index) in 38" :key="index" :value="index+1">{{ index +1 }}</option>
+      <select v-model="matchday" class="select">
+        <option v-for="(value, index) in 38" :key="index" :value="index+1">Matchday {{ index +1 }}</option>
+        <font-awesome-icon icon="user-circle" />
       </select>
 
       <div v-if="matchdays" class="titles">
@@ -22,10 +23,19 @@
 </template>
 
 <script>
+  import Vue from "vue";
   import Header from "~/components/Header";
   import FixtureList from "~/components/FixtureList";
   import Sidebar from "~/components/Sidebar";
   import { mapState } from "vuex";
+
+  import { library } from '@fortawesome/fontawesome-svg-core';
+  import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+  import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+  library.add(faUserCircle);
+
+  Vue.component('font-awesome-icon', FontAwesomeIcon);
 
   export default {
     components: {
@@ -57,7 +67,9 @@
   }
 </script>
 
-<style>
+<style lang="scss">
+@import "../assets/scss/variables.scss";
+
 .container {
   width: 50%;
   padding-right: 15px;
@@ -66,10 +78,13 @@
   margin-left: auto;
 }
 body {
-  background-color:#70d8b6;
+  background-color: $teal;
 }
 .titles {
   text-align: center;
   margin: 15px 0;
 }
+
+
+
 </style>

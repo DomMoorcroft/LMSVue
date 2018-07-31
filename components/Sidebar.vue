@@ -50,13 +50,14 @@ import Login from "~/components/Login";
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
 
 .sidebar {
   position: absolute;
   top:0;
   height: 100%;
-  background-color: #5baf94;
+  background-color: $dark-teal;
   width: 320px;
 }
 .sidebar-inner {
@@ -100,7 +101,7 @@ import Login from "~/components/Login";
 
 hr {
   margin: 10px 0;
-  border-color:#70d8b6;
+  border-color:$teal;
 }
 
 </style>

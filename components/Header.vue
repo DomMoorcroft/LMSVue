@@ -28,11 +28,13 @@ import { mapState } from "vuex";
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
+
 .nav {
   width: 100%;
   height: 80px;
-  background-color: #5baf94;
+  background-color: $dark-teal;
   padding: 10px;
 
   text-align: center;

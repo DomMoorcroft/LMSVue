@@ -53,21 +53,23 @@
   }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "../assets/scss/variables.scss";
+
 .fixture {
   display: flex;
   text-align: center;
   margin: 5px;
   flex-direction: column;
 
-  border: 1px solid #70d8b6;
-  background-color:#70d8b6;
+  border: 1px solid $teal;
+  background-color:$teal;
 
-overflow: hidden;
+  overflow: hidden;
 }
 .fixture:hover {
-  border: 1px solid #5baf94;
-  background-color: #5baf94;
+  border: 1px solid $dark-teal;
+  background-color: $dark-teal;
   cursor: pointer;
 }
 
