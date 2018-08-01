@@ -42,9 +42,6 @@
         isHidden: true
       }
     },
-    mounted() {
-      console.log(this.match);
-    },
     methods: {
       getStats() {
         this.isHidden = !this.isHidden;

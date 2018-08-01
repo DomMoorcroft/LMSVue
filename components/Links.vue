@@ -2,10 +2,10 @@
   <div class="links-container">
     <transition-group name="slide-list" tag="div">
 
-      <a href="#" :key="1">Home</a>
+      <nuxt-link to="/" class="link" :key="1">Home</nuxt-link>
 
       <button class="dropdown" @click="toggleDropdown()" :key="2">
-        Competitions
+        Leagues
       </button>
 
       <div class="dropdown-list-container" :key="3">
@@ -33,11 +33,11 @@
         list: [
           {
             title: "Premier League",
-            link: "#"
+            link: "/leagues/2021"
           },
           {
             title: "Championship",
-            link: "#"
+            link: "/leagues/2016"
           }
         ]
       }
@@ -68,7 +68,7 @@ button {
   }
 
 }
-a {
+a, .link {
   text-decoration: none;
   display: block;
 }
