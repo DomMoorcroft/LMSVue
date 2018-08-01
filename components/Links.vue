@@ -1,36 +1,50 @@
 <template>
   <div class="links-container">
-    <a href="#">Home</a>
-    <button class="dropdown" @click="toggleDropdown()">
-      Competitions
-      <span><font-awesome-icon icon="user-circle" /></span>
-    </button>
-    <div class="dropdown-list-container">
-      <transition name="slide">
-      <div class="dropdown-list" v-if="dropdownActive">
-        <a href="#">Premier League</a>
-        <a href="#">Championship</a>
+    <transition-group name="slide-list" tag="div">
+
+      <a href="#" :key="1">Home</a>
+
+      <button class="dropdown" @click="toggleDropdown()" :key="2">
+        Competitions
+      </button>
+
+      <div class="dropdown-list-container" :key="3">
+          <DropdownList :show="dropdownActive" :list="list"></DropdownList>
       </div>
-    </transition>
-    </div>
-    <a href="#">Tester</a>
+
+      <a href="#" :key="7">Tester</a>
+
+    </transition-group>
 
 
   </div>
 </template>
 
 <script>
+  import DropdownList from "~/components/DropdownList";
+
   export default {
+    components: {
+      DropdownList
+    },
     data() {
       return {
-        dropdownActive: false
+        dropdownActive: false,
+        list: [
+          {
+            title: "Premier League",
+            link: "#"
+          },
+          {
+            title: "Championship",
+            link: "#"
+          }
+        ]
       }
     },
     methods: {
       toggleDropdown() {
-
         this.dropdownActive = !this.dropdownActive;
-        console.log(this.dropdownActive);
       }
     }
   }
@@ -74,11 +88,24 @@ a {
 }
 .slide-enter {
   transform: translate(0, -100%);
-  height: auto;
-
 }
 .slide-leave-to {
   transform: translate(0, -100%);
+}
+
+
+
+.slide-list-move {
+  transition: transform 0.5s, height 0.5s;
+}
+
+.slide-list-enter {
+  transform: translate(0, -100%);
+  height: 100px;
+}
+.slide-list-leave-to {
+  transform: translate(0, -100%);
+  height: 0;
 }
 
 </style>
