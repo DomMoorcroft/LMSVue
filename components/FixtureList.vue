@@ -1,8 +1,8 @@
 <template>
-  <div v-if="matchday && matchdayMatches">
+  <div v-if="weeklyFixtures && weeklyMatches">
 
     <div class="fixtureList">
-      <Fixture v-for="(match, index) in matchdayMatches" :key="index" :match="match"></Fixture>
+      <Fixture v-for="(match, index) in weeklyMatches" :key="index" :match="match"></Fixture>
     </div>
 
   </div>
@@ -16,21 +16,61 @@ export default {
   components: {
     Fixture
   },
+  props: {
+    leagueId: {
+      type: Number,
+      required: true
+    }
+  },
   data() {
     return {
       isHidden: true
     }
   },
   computed: {
-    ...mapState({
-      matchdayNumber: state => state.matchday.filters,
-      matchday: state => state.matchday,
-      matchdayMatches: state => state.matchday.matches
-    })
-  },
-  methods: {
-
+    ...mapState ({
+      leagues: state => state.leagues
+    }),
+    selectedLeague() {
+      return this.leagues.filter(item => item.id === this.leagueId)[0];
+    },
+    leagueIndex() {
+      return this.leagues.indexOf(this.selectedLeague);
+    },
+    weeklyFixtures() {
+      return this.selectedLeague.fixtures;
+    },
+    matchdayNumber() {
+      return this.selectedLeague.fixtures.filters;
+    },
+    weeklyMatches() {
+      return this.selectedLeague.fixtures.matches;
+    }
   }
+
+/*
+  ...mapState ({
+        leagues: state => state.leagues
+      }),
+      selectedLeague() {
+        return this.leagues.filter(item => item.id === this.leagueId)[0];
+      },
+      leagueIndex() {
+        return this.leagues.indexOf(this.selectedLeague);
+      },
+      numberOfMatchdays() {
+        return this.selectedLeague.numberOfMatchdays;
+      },
+      weeklyFixtures() {
+        return this.selectedLeague.fixtures;
+      },
+      currentMatchday() {
+        return this.selectedLeague.currentMatchday;
+      }
+  }
+*/
+
+
 };
 </script>
 

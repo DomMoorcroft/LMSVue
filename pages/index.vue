@@ -37,7 +37,7 @@
     },
     methods: {
       getMatchDay() {
-        this.$store.dispatch("GET_MATCHDAY", this.matchday);
+        this.$store.dispatch("FIXTURES", this.matchday);
       }
     }
   }

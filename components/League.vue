@@ -6,12 +6,12 @@
         <option v-for="(value, index) in numberOfMatchdays" :key="index" :value="index+1">Matchday {{ index +1 }}</option>
       </select>
 
-      <div v-if="matchdays" class="titles">
-        <h1>{{ matchdays.competition.name }} </h1>
+      <div v-if="weeklyFixtures" class="titles">
+        <h1>{{ weeklyFixtures.competition.name }} </h1>
         <h2>Matchday {{ matchday }}</h2>
       </div>
 
-      <FixtureList></FixtureList>
+      <FixtureList :leagueId="leagueId"></FixtureList>
   </div>
 </template>
 
@@ -35,20 +35,39 @@ import FixtureList from "~/components/FixtureList"
       }
     },
     mounted() {
+      // this.getFixtures();
       this.getNumberOfMatchdays();
       this.getCurrentMatchday();
       this.matchday = this.currentMatchday;
     },
     computed: {
       ...mapState ({
-        numberOfMatchdays: state => state.numberOfMatchdays,
-        matchdays: state => state.matchday,
-        currentMatchday: state => state.currentMatchday
-      })
+        leagues: state => state.leagues
+      }),
+      selectedLeague() {
+        return this.leagues.filter(item => item.id === this.leagueId)[0];
+      },
+      leagueIndex() {
+        return this.leagues.indexOf(this.selectedLeague);
+      },
+      numberOfMatchdays() {
+        return this.selectedLeague.numberOfMatchdays;
+      },
+      weeklyFixtures() {
+        return this.selectedLeague.fixtures;
+      },
+      currentMatchday() {
+        return this.selectedLeague.currentMatchday;
+      }
     },
     watch: {
       matchday() {
-        this.getMatchDay();
+
+        // const storeMatchday = parseInt(this.weeklyFixtures.filters.matchday, 10);
+        // if(this.matchday !== storeMatchday || this.leagueId !== this.leagueIndex) {
+          this.getFixtures();
+        // }
+
       },
       currentMatchday() {
         this.matchday = this.currentMatchday;
@@ -56,15 +75,19 @@ import FixtureList from "~/components/FixtureList"
     },
     methods: {
       getNumberOfMatchdays() {
-        this.$store.dispatch("GET_NUMBER_OF_MATCHDAYS", this.leagueId);
-      },
-      getMatchDay() {
-        const leagueMatchday = {leagueId:this.leagueId, matchday:this.matchday};
+        const LeagueIdIndex={leagueId:this.leagueId, leagueIndex: this.leagueIndex};
 
-        this.$store.dispatch("GET_MATCHDAY", leagueMatchday);
+        this.$store.dispatch("GET_NUMBER_OF_MATCHDAYS", LeagueIdIndex);
+      },
+      getFixtures() {
+        const leagueMatchday = {leagueId:this.leagueId, matchday:this.matchday, leagueIndex: this.leagueIndex};
+
+        this.$store.dispatch("GET_FIXTURES", leagueMatchday);
       },
       getCurrentMatchday() {
-        this.$store.dispatch("GET_CURRENT_MATCHDAY", this.leagueId);
+        const LeagueIdIndex={leagueId:this.leagueId, leagueIndex: this.leagueIndex};
+
+        this.$store.dispatch("GET_CURRENT_MATCHDAY", LeagueIdIndex);
       }
     }
   }

@@ -12,15 +12,33 @@ const getNumberOfMatchdays = (teams) => {
 
 const createStore = () => {
   return new vuex.Store({
+    // state: {
+    //   matchday: null,
+    //   numberOfMatchdays: null,
+    //   currentMatchday: null,
+    //   showSidebar: false
+    // },
     state: {
-      matchday: null,
-      numberOfMatchdays: null,
-      currentMatchday: null,
-      showSidebar: false
+      leagues: [
+         {
+          id: 2021,
+          fixtures: null,
+          numberOfMatchdays: null,
+          currentMatchday: null
+        },
+        {
+          id: 2016,
+          fixtures: null,
+          numberOfMatchdays: null,
+          currentMatchday: null
+        }
+      ],
+       showSidebar: false
     },
     actions: {
-      GET_MATCHDAY({ commit }, { leagueId, matchday}) {
+      GET_FIXTURES({ commit }, { leagueId, matchday, leagueIndex}) {
         var url = `/v2/competitions/${leagueId}/matches?matchday=${matchday}`;
+
         // Premier League - 2021
         // Cmampionship - 2016
 
@@ -28,8 +46,8 @@ const createStore = () => {
           .get(url)
           .then(result => {
             const { data } = result;
-
-            commit("SET_MATCHDAY", data);
+            console.log(result);
+            commit("SET_FIXTURES", {data, leagueIndex});
 
             return data;
           })
@@ -39,7 +57,7 @@ const createStore = () => {
 
 
       },
-      GET_NUMBER_OF_MATCHDAYS({ commit },leagueId) {
+      GET_NUMBER_OF_MATCHDAYS({ commit },{leagueId, leagueIndex}) {
         var url = `/v2/competitions/${leagueId}/teams`;
 
         return axios
@@ -47,9 +65,9 @@ const createStore = () => {
           .then(result => {
             const { data } = result;
 
-            const noOfMatchdays = getNumberOfMatchdays(data.teams.length);
+            const numberOfMatchdays = getNumberOfMatchdays(data.teams.length);
 
-            commit("SET_NUMBER_OF_MATCHDAYS", noOfMatchdays);
+            commit("SET_NUMBER_OF_MATCHDAYS", {numberOfMatchdays, leagueId, leagueIndex});
 
             return data;
           })
@@ -57,7 +75,7 @@ const createStore = () => {
             console.error(error.status);
           })
       },
-      GET_CURRENT_MATCHDAY({ commit }, leagueId) {
+      GET_CURRENT_MATCHDAY({ commit }, {leagueId, leagueIndex}) {
         var url = `/v2/competitions/${leagueId}`;
 
         return axios
@@ -71,7 +89,7 @@ const createStore = () => {
               currentMatchday = 1;
             }
 
-            commit("SET_CURRENT_MATCHDAY", currentMatchday);
+            commit("SET_CURRENT_MATCHDAY", {currentMatchday, leagueId, leagueIndex});
 
 
 
@@ -83,14 +101,17 @@ const createStore = () => {
       }
     },
     mutations: {
-      SET_MATCHDAY(state, data) {
-        state.matchday = data;
+      SET_FIXTURES(state, {data, leagueIndex}) {
+        console.log("data", data);
+        state.leagues[leagueIndex].fixtures = data;
       },
-      SET_NUMBER_OF_MATCHDAYS(state, data) {
-        state.numberOfMatchdays = data;
+      SET_NUMBER_OF_MATCHDAYS(state, {numberOfMatchdays, leagueId, leagueIndex}) {
+        console.log("numberOfMatchdays", numberOfMatchdays);
+        state.leagues[leagueIndex].numberOfMatchdays = numberOfMatchdays;
       },
-      SET_CURRENT_MATCHDAY(state, data) {
-        state.currentMatchday = data;
+      SET_CURRENT_MATCHDAY(state, {currentMatchday, leagueId, leagueIndex}) {
+        console.log("currentmatchday", currentMatchday);
+        state.leagues[leagueIndex].currentMatchday = currentMatchday;
       },
       TOGGLE_SIDEBAR(state, data) {
         state.showSidebar = data;
