@@ -37,6 +37,6 @@ html {
 }
 
 body {
-  background-color: #70d8b6;
+  background-color: #FAFAFA;
 }
 </style>

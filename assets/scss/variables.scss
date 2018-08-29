@@ -1,12 +1,11 @@
 $header-blue: #26428B;
 $light-gray: #FAFAFA;
 $gray: #DEDEDE;
-$yellow: #e7f404;
-$dark-teal: #5baf94;
+$white: #FFF;
 
 $text-color: #1A3255;
-$text-size: 18px;
-$text-size-large: 24px;
+$text-size: 16px;
+$text-size-large: 22px;
 
 *{
   font-size: $text-size;
@@ -20,138 +19,184 @@ $text-size-large: 24px;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
-.man-utd {
+.man-uwe {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .leicester {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .newcastle {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
-.spurs {
+.tottenham {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .huddersfield {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .chelsea {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .bournemouth {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .cardiff {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .watford {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #000;
+  div {
+    color: #000;
+  }
 }
 .brighton {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .fulham {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .palace {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .wolves {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #000;
+  div {
+    color: #000;
+  }
 }
 .southampton {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .burnley {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .shite {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .westham {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .arsenal {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
 }
 .man-city {
   background: #556DB7;
   background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
   background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
   background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  color: #FFF;
+  div {
+    color: #FFF;
+  }
+}
+.score {
+  background: $gray;
+  background: -moz-linear-gradient(top, $light-gray 1%, $gray 100%);
+  background: -webkit-linear-gradient(top, $light-gray 1%,$gray 100%);
+  background: linear-gradient(to bottom, $light-gray 1%,$gray 100%);
 }

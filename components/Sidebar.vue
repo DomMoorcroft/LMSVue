@@ -57,7 +57,7 @@ import Login from "~/components/Login";
   position: absolute;
   top:0;
   height: 100%;
-  background-color: $dark-teal;
+  background-color: $white;
   width: 320px;
 }
 .sidebar-inner {
@@ -101,7 +101,7 @@ import Login from "~/components/Login";
 
 hr {
   margin: 10px 0;
-  border-color:$teal;
+  border-color:$gray;
 }
 
 </style>

@@ -1,18 +1,36 @@
 <template>
   <div class="fixture" @click="getStats">
     <div class="fixtureContainer">
-      <div id="homeTeam" class="homeTeam">
-        {{ match.homeTeam.name }}
+
+      <div class="gradientContainer" :class="getTeamClassImage(match.homeTeam.name)">
+        <div id="homeTeam" class="homeTeam">{{ match.homeTeam.name }}</div>
       </div>
-      <div id="homeTeamScore" class="score">{{ match.score.fullTime.homeTeam | score }}</div>
-      <div class="divider"> &mdash; </div>
-      <div id="awayTeamScore" class="score">{{ match.score.fullTime.awayTeam | score }}</div>
-      <div id="awayTeam" class="awayTeam">
-        {{ match.awayTeam.name }}
+      <div class="gradientContainer">
+        <div id="homeTeamImage" class="homeTeamImage"></div>
       </div>
+      <div class="gradientContainer score">
+        <div id="homeTeamScore">{{ match.score.fullTime.homeTeam | score }}</div>
+      </div>
+
+
+      <div class="gradientContainer">
+        <div class="divider"> V </div>
+      </div>
+
+
+      <div class="gradientContainer score">
+        <div id="awayTeamScore">{{ match.score.fullTime.awayTeam | score }}</div>
+      </div>
+      <div class="gradientContainer">
+        <div id="awayTeamImage" class="awayTeamImage"></div>
+      </div>
+      <div class="gradientContainer" :class="getTeamClassImage(match.awayTeam.name)">
+        <div id="awayTeam" class="awayTeam">{{ match.awayTeam.name }}</div>
+      </div>
+
     </div>
 
-    <div class="statsContainer">
+    <!-- <div class="statsContainer">
       <transition name="slide">
         <div class="stats" v-if="!isHidden">
           <div class="homeTeamStats">
@@ -23,7 +41,7 @@
           </div>
         </div>
       </transition>
-    </div>
+    </div> -->
 
 
   </div>
@@ -45,6 +63,52 @@
     methods: {
       getStats() {
         this.isHidden = !this.isHidden;
+      },
+      getTeamClassImage(team) {
+        switch(team) {
+          case "Everton FC":
+            return "everton"
+          case "Wolverhampton Wanderers FC":
+            return "wolves"
+          case "Manchester City FC":
+            return "man-city"
+          case "Arsenal FC":
+            return "arsenal"
+          case "West Ham United FC":
+            return "westham"
+          case "Huddersfield Town AFC":
+            return "huddersfield"
+          case "Cardiff City FC":
+            return "cardiff"
+          case "Southampton FC":
+            return "southampton"
+          case "Leicester City FC":
+            return "leicester"
+          case "AFC Bournemouth":
+            return "bournemouth"
+          case "Liverpool FC":
+            return "shite"
+          case "Brighton & Hove Albion FC":
+            return "brighton"
+          case "Watford FC":
+            return "watford"
+          case "Crystal Palace FC":
+            return "palace"
+          case "Fulham FC":
+            return "fulham"
+          case "Burnley FC":
+            return "burnley"
+          case "Newcastle United FC":
+            return "newcastle"
+          case "Chelsea FC":
+            return "chelsea"
+          case "Manchester United FC":
+            return "man-uwe"
+          case "Tottenham Hotspur FC":
+            return "tottenham"
+          default:
+            return ""
+        }
       }
     }
   }
@@ -56,18 +120,17 @@
 .fixture {
   display: flex;
   text-align: center;
-  margin: 5px;
+  font-weight: 700;
+  margin: 15px;
   flex-direction: column;
 
-  border: 1px solid $teal;
-  background-color:$teal;
+  background-color:$gray;
 
   overflow: hidden;
-}
-.fixture:hover {
-  border: 1px solid $dark-teal;
-  background-color: $dark-teal;
-  cursor: pointer;
+
+  -ms-transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
 }
 
 
@@ -76,12 +139,7 @@
   flex: 1 1 0;
 }
 
-.score {
-  font-size: 1em;
-}
-.divider {
-  padding: 0 10px;
-}
+
 .hidden {
   display: none;
 }
@@ -104,6 +162,46 @@
 
 .fixtureContainer {
   display: flex;
+
+  -ms-transform: skew(30deg);
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
+}
+
+.gradientContainer {
+  padding: 15px;
+  -ms-transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  transform: skew(-30deg);
+
+  div {
+    -ms-transform: skew(30deg);
+    -webkit-transform: skew(30deg);
+    transform: skew(30deg);
+  }
+
+  &:nth-child(1) {
+    width: 35%;
+  }
+  &:nth-child(2) {
+    width: 5%;
+  }
+  &:nth-child(3) {
+    width: 7.5%;
+  }
+  &:nth-child(4) {
+    width: 5%;
+    background-color: $light-gray;
+  }
+  &:nth-child(5) {
+    width: 7.5%;
+  }
+  &:nth-child(6) {
+    width: 5%;
+  }
+  &:nth-child(7) {
+    width: 35%;
+  }
 }
 
 .slide-leave-active,

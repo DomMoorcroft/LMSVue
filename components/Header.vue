@@ -34,7 +34,7 @@ import { mapState } from "vuex";
 .nav {
   width: 100%;
   height: 80px;
-  background-color: $dark-teal;
+  background-color: $header-blue;
   padding: 10px;
 
   text-align: center;
