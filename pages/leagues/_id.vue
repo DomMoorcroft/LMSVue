@@ -13,7 +13,7 @@
     },
     data() {
       return {
-        leagueId: this.$route.params.id
+        leagueId: parseInt(this.$route.params.id, 10)
       }
 
     }
