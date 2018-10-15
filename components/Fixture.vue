@@ -6,7 +6,7 @@
         <div id="homeTeam" class="homeTeam">{{ match.homeTeam.name }}</div>
       </div>
       <div class="gradientContainer">
-        <div id="homeTeamImage" class="homeTeamImage"></div>
+        <div id="homeTeamImage" class="teamImage"><img :src="imageUrl(match.homeTeam.name)" alt="Team badge" class="badge"/></div>
       </div>
       <div class="gradientContainer score">
         <div id="homeTeamScore">{{ match.score.fullTime.homeTeam | score }}</div>
@@ -22,7 +22,7 @@
         <div id="awayTeamScore">{{ match.score.fullTime.awayTeam | score }}</div>
       </div>
       <div class="gradientContainer">
-        <div id="awayTeamImage" class="awayTeamImage"></div>
+        <div id="awayTeamImage" class="teamImage"><img :src="imageUrl(match.awayTeam.name)" alt="Team badge" class="badge" /></div>
       </div>
       <div class="gradientContainer" :class="getTeamClassImage(match.awayTeam.name)">
         <div id="awayTeam" class="awayTeam">{{ match.awayTeam.name }}</div>
@@ -109,6 +109,10 @@
           default:
             return ""
         }
+      },
+      imageUrl(team) {
+        team = this.getTeamClassImage(team);
+        return `../images/badges/${team}.png`
       }
     }
   }
@@ -121,7 +125,7 @@
   display: flex;
   text-align: center;
   font-weight: 700;
-  margin: 15px;
+  margin: 20px 10px;
   flex-direction: column;
 
   background-color:$gray;
@@ -162,6 +166,7 @@
 
 .fixtureContainer {
   display: flex;
+  height: 50px;
 
   -ms-transform: skew(30deg);
   -webkit-transform: skew(30deg);
@@ -173,17 +178,36 @@
   -ms-transform: skew(-30deg);
   -webkit-transform: skew(-30deg);
   transform: skew(-30deg);
+  overflow: hidden;
 
   div {
     -ms-transform: skew(30deg);
     -webkit-transform: skew(30deg);
     transform: skew(30deg);
   }
+  .teamImage {
+    // max-width: 96px;
+    // width: 100%;
+    position: relative;
+
+
+    .badge {
+      position: absolute;
+      top: -10px;
+      right: 5px;
+      height: 68px;
+      width: 68px;
+      -ms-transform: rotate(10deg);
+      -webkit-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+  }
 
   &:nth-child(1) {
     width: 35%;
   }
   &:nth-child(2) {
+    padding: 0;
     width: 5%;
   }
   &:nth-child(3) {
@@ -197,6 +221,7 @@
     width: 7.5%;
   }
   &:nth-child(6) {
+    padding: 0;
     width: 5%;
   }
   &:nth-child(7) {

@@ -13,21 +13,29 @@ $text-size-large: 22px;
 }
 
 //Teams gradient backgrounds
-
 .everton {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #546db7;
+  background: -moz-linear-gradient(top, #546db7 1%, #25428a 100%);
+  background: -webkit-linear-gradient(top, #546db7 1%,#25428a 100%);
+  background: linear-gradient(to bottom, #546db7 1%,#25428a 100%);
   div {
     color: #FFF;
   }
 }
 .man-uwe {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #920101;
+  background: -moz-linear-gradient(top, #fb2122 1%, #920101 100%);
+  background: -webkit-linear-gradient(top, #fb2122 1%,#920101 100%);
+  background: linear-gradient(to bottom, #fb2122 1%,#920101 100%);
+  div {
+    color: #FFF;
+  }
+}
+.newcastle {
+  background: #000000;
+  background: -moz-linear-gradient(top, #757575 1%, #000000 100%);
+  background: -webkit-linear-gradient(top, #757575 1%,#000000 100%);
+  background: linear-gradient(to bottom, #757575 1%,#000000 100%);
   div {
     color: #FFF;
   }
@@ -41,155 +49,147 @@ $text-size-large: 22px;
     color: #FFF;
   }
 }
-.newcastle {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
-  div {
-    color: #FFF;
-  }
-}
 .tottenham {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #000c2f;
+  background: -moz-linear-gradient(top, #001d72 1%, #000c2f 100%);
+  background: -webkit-linear-gradient(top, #001d72 1%,#000c2f 100%);
+  background: linear-gradient(to bottom, #001d72 1%,#000c2f 100%);
   div {
     color: #FFF;
   }
 }
 .huddersfield {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #3b3b75;
+  background: -moz-linear-gradient(top, #7b8bbb 1%, #3b3b75 100%);
+  background: -webkit-linear-gradient(top, #7b8bbb 1%,#3b3b75 100%);
+  background: linear-gradient(to bottom, #7b8bbb 1%,#3b3b75 100%);
   div {
     color: #FFF;
   }
 }
 .chelsea {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #004495;
+  background: -moz-linear-gradient(top, #6878b4 1%, #004495 100%);
+  background: -webkit-linear-gradient(top, #6878b4 1%,#004495 100%);
+  background: linear-gradient(to bottom, #6878b4 1%,#004495 100%);
   div {
     color: #FFF;
   }
 }
 .bournemouth {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #b0110f;
+  background: -moz-linear-gradient(top, #ec1e1b 1%, #b0110f 100%);
+  background: -webkit-linear-gradient(top, #ec1e1b 1%,#b0110f 100%);
+  background: linear-gradient(to bottom, #ec1e1b 1%,#b0110f 100%);
   div {
     color: #FFF;
   }
 }
 .cardiff {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #0a5a8f;
+  background: -moz-linear-gradient(top, #5c9fd4 1%, #0a5a8f 100%);
+  background: -webkit-linear-gradient(top, #5c9fd4 1%,#0a5a8f 100%);
+  background: linear-gradient(to bottom, #5c9fd4 1%,#0a5a8f 100%);
   div {
     color: #FFF;
   }
 }
 .watford {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #ffe50a;
+  background: -moz-linear-gradient(top, #ffe50a 1%, #ad9b00 100%);
+  background: -webkit-linear-gradient(top, #ffe50a 1%,#ad9b00 100%);
+  background: linear-gradient(to bottom, #ffe50a 1%,#ad9b00 100%);
   div {
     color: #000;
   }
 }
 .brighton {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #2380ce;
+  background: -moz-linear-gradient(top, #2380ce 1%, #005ead 100%);
+  background: -webkit-linear-gradient(top, #2380ce 1%,#005ead 100%);
+  background: linear-gradient(to bottom, #2380ce 1%,#005ead 100%);
   div {
     color: #FFF;
   }
 }
 .fulham {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #757575;
+  background: -moz-linear-gradient(top, #757575 1%, #000000 100%);
+  background: -webkit-linear-gradient(top, #757575 1%,#000000 100%);
+  background: linear-gradient(to bottom, #757575 1%,#000000 100%);
   div {
     color: #FFF;
   }
 }
+
 .palace {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #d24c63;
+  background: -moz-linear-gradient(top, #d24c63 1%, #004892 100%);
+  background: -webkit-linear-gradient(top, #d24c63 1%,#004892 100%);
+  background: linear-gradient(to bottom, #d24c63 1%,#004892 100%);
   div {
     color: #FFF;
   }
 }
 .wolves {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #f6c700;
+  background: -moz-linear-gradient(top, #f6c700 1%, #cba400 100%);
+  background: -webkit-linear-gradient(top, #f6c700 1%,#cba400 100%);
+  background: linear-gradient(to bottom, #f6c700 1%,#cba400 100%);
   div {
     color: #000;
   }
 }
 .southampton {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #ec1e1b;
+  background: -moz-linear-gradient(top, #ec1e1b 1%, #b0110f 100%);
+  background: -webkit-linear-gradient(top, #ec1e1b 1%,#b0110f 100%);
+  background: linear-gradient(to bottom, #ec1e1b 1%,#b0110f 100%);
   div {
     color: #FFF;
   }
 }
 .burnley {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #a41d5c;
+  background: -moz-linear-gradient(top, #a41d5c 1%, #6b0d3a 100%);
+  background: -webkit-linear-gradient(top, #a41d5c 1%,#6b0d3a 100%);
+  background: linear-gradient(to bottom, #a41d5c 1%,#6b0d3a 100%);
   div {
     color: #FFF;
   }
 }
 .shite {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #ff0028;
+  background: -moz-linear-gradient(top, #ff0028 1%, #d20025 100%);
+  background: -webkit-linear-gradient(top, #ff0028 1%,#d20025 100%);
+  background: linear-gradient(to bottom, #ff0028 1%,#d20025 100%);
   div {
     color: #FFF;
   }
 }
 .westham {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #b13e53;
+  background: -moz-linear-gradient(top, #b13e53 1%, #7d2b3a 100%);
+  background: -webkit-linear-gradient(top, #b13e53 1%,#7d2b3a 100%);
+  background: linear-gradient(to bottom, #b13e53 1%,#7d2b3a 100%);
   div {
     color: #FFF;
   }
 }
 .arsenal {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #ff2424;
+  background: -moz-linear-gradient(top, #ff2424 1%, #dd0000 100%);
+  background: -webkit-linear-gradient(top, #ff2424 1%,#dd0000 100%);
+  background: linear-gradient(to bottom, #ff2424 1%,#dd0000 100%);
   div {
     color: #FFF;
   }
 }
 .man-city {
-  background: #556DB7;
-  background: -moz-linear-gradient(top, #556DB7 1%, #26428B 100%);
-  background: -webkit-linear-gradient(top, #556DB7 1%,#26428B 100%);
-  background: linear-gradient(to bottom, #556DB7 1%,#26428B 100%);
+  background: #8ac8f6;
+  background: -moz-linear-gradient(top, #8ac8f6 1%, #69ade0 100%);
+  background: -webkit-linear-gradient(top, #8ac8f6 1%,#69ade0 100%);
+  background: linear-gradient(to bottom, #8ac8f6 1%, #69ade0 100%);
   div {
     color: #FFF;
   }
